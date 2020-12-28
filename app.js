@@ -45,7 +45,7 @@ cron.schedule("*/1 * * * *", async () => {
   const timestamp = Math.floor(Date.now() / 1000 / 60) * 60;
 
   redis.set(timestamp, price);
-  redis.expire(timestamp, 60 * 60 * 24 * 4);
+  redis.expire(timestamp, 60 * 60 * 24 * 30);
 });
 
 module.exports = app;
